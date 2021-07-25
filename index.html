@@ -204,6 +204,9 @@
 				}
 			}
 			console.log(flag)
+			if(JSON.parse(window.localStorage.getItem('id_utente')) == null){
+				flag = parseInt(-1)
+			}
 			if(flag != parseInt(-1)){
 				document.getElementById("lobby_name").innerHTML = JSON.stringify(data[flag].name)
 				for(m=0; m<data[flag].players.length; m++){
